@@ -1,3 +1,5 @@
+import 'package:all_in_one/constants/routes_constants.dart';
+import 'package:all_in_one/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 
 class MainBottomNavigation extends StatelessWidget {
@@ -8,15 +10,8 @@ class MainBottomNavigation extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
           child: Column(
-        children: [
-          ElevatedButton(
-              onPressed: () {}, child: Text("Simple Bottom Navigation")),
-          ElevatedButton(
-              onPressed: () {}, child: Text("Simple Bottom Navigation")),
-          ElevatedButton(
-              onPressed: () {}, child: Text("Simple Bottom Navigation")),
-          ElevatedButton(
-              onPressed: () {}, child: Text("Simple Bottom Navigation")),
+        children: const [
+          CustomElevatedButton(route: pillBottomNavigationRoute)
         ],
       )),
     );

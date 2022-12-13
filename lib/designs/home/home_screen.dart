@@ -1,7 +1,7 @@
-import 'package:all_in_one/constants/routes_constants.dart';
+import '../../constants/routes_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
+import '../../widgets/index.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -11,12 +11,13 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: SingleChildScrollView(
           child: Column(
-        children: [
-          ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, bottomNavigationRoute);
-              },
-              child: const Text("hello world"))
+        children: const [
+          CustomElevatedButton(
+            route: bottomNavigationRoute,
+            buttonName: "Bottom Navigation",
+          ),
+          CustomElevatedButton(route: bottomNavigationRoute),
+          CustomElevatedButton(route: bottomNavigationRoute),
         ],
       )),
     );
