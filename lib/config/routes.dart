@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../constants/routes_constants.dart';
 import '../designs/bottom_navigation/main_bottom_navigation.dart';
 import '../designs/bottom_navigation/pages/bottom_navigations.dart';
+import '../designs/bottom_navigation/pages/curve_bottom_navigation.dart';
 import '../designs/home/home_screen.dart';
 
 class AllInOneRoute {
@@ -14,6 +15,8 @@ class AllInOneRoute {
         return _getPageRoute(const HomeScreen());
       case pillBottomNavigationRoute:
         return _getPageRoute(PillBottomNavigations());
+      case curveBottomNavigationRoute:
+        return _getPageRoute(const BottomNavBarV2());
     }
 
     return null;

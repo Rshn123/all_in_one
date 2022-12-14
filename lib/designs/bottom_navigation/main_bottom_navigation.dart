@@ -11,7 +11,8 @@ class MainBottomNavigation extends StatelessWidget {
       body: SingleChildScrollView(
           child: Column(
         children: const [
-          CustomElevatedButton(route: pillBottomNavigationRoute)
+          CustomElevatedButton(route: pillBottomNavigationRoute),
+          CustomElevatedButton(route: curveBottomNavigationRoute)
         ],
       )),
     );

@@ -1,3 +1,4 @@
+import 'package:all_in_one/designs/bottom_navigation/pages/bottom_navigations.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavBarV2 extends StatefulWidget {
@@ -10,6 +11,29 @@ class BottomNavBarV2 extends StatefulWidget {
 class _BottomNavBarV2State extends State<BottomNavBarV2> {
   int currentIndex = 0;
 
+  final List<Widget> _widgetOption = [
+    const Screens(
+      color: 0xffd4e4ef,
+      text: "HomeScreen",
+    ),
+    const Screens(
+      color: 0xff77ccee,
+      text: "HomeScreen",
+    ),
+    const Screens(
+      color: 0xff40826d,
+      text: "HomeScreen",
+    ),
+    const Screens(
+      color: 0xff4a485b,
+      text: "HomeScreen",
+    ),
+    const Screens(
+      color: 0xffa64f59,
+      text: "HomeScreen",
+    )
+  ];
+
   setBottomBarIndex(index) {
     setState(() {
       currentIndex = index;
@@ -20,8 +44,11 @@ class _BottomNavBarV2State extends State<BottomNavBarV2> {
   Widget build(BuildContext context) {
     final Size size = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.white.withAlpha(55),
-      body: Stack(
+      body: SingleChildScrollView(
+          child: Column(
+        children: [_widgetOption.elementAt(currentIndex)],
+      )),
+      bottomNavigationBar: Stack(
         children: [
           Positioned(
             bottom: 0,
@@ -43,7 +70,7 @@ class _BottomNavBarV2State extends State<BottomNavBarV2> {
                         elevation: 0.1,
                         onPressed: () {}),
                   ),
-                  Container(
+                  SizedBox(
                     width: size.width,
                     height: 80,
                     child: Row(
@@ -110,7 +137,7 @@ class _BottomNavBarV2State extends State<BottomNavBarV2> {
 class BNBCustomPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = new Paint()
+    Paint paint = Paint()
       ..color = Colors.white
       ..style = PaintingStyle.fill;
 

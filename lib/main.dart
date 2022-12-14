@@ -1,9 +1,9 @@
-import 'package:all_in_one/config/routes.dart';
-import 'package:all_in_one/constants/routes_constants.dart';
-import 'package:all_in_one/designs/bottom_navigation/pages/bottom_navigations.dart';
-import 'package:all_in_one/designs/bottom_navigation/provider/bottom_navigation_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import 'config/routes.dart';
+import 'constants/routes_constants.dart';
+import 'designs/bottom_navigation/provider/bottom_navigation_provider.dart';
 
 void main() {
   runApp(MultiProvider(providers: [
